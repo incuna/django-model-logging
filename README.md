@@ -16,7 +16,7 @@ block in `model_logging/tests/run.py` for an (extremely insecure) example.
 
 #### Low-level use
 
-```
+```python
 from model_logging.models import LogEntry
 
 LogEntry.objects.log(
@@ -41,7 +41,7 @@ or `LogEntry.OPERATION_MODIFIED`.
 
 To add methods to a view(set) that can be used to straightforwardly log changes:
 
-```
+```python
 from model_logging.views import LoggingMethodMixin
 
 class AViewOrViewset(LoggingMethodMixin, ModelViewSet):
@@ -57,7 +57,7 @@ class AViewOrViewset(LoggingMethodMixin, ModelViewSet):
 
 The class now has access to the following:
 
-```
+```python
 def log(self, operation, data):
     # A simplified version of LogEntry.objects.log,
     # with some parameters pre-filled.
@@ -78,7 +78,7 @@ More abstract still:
 
 A viewset can log its own changes!
 
-```
+```python
 from model_logging.views import LoggingViewSetMixin
 
 class AVeryShinyViewSet(LoggingViewSetMixin, ModelViewSet):
