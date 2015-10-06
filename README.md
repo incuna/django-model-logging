@@ -31,7 +31,8 @@ LogEntry.objects.log(
 The parameters are as follows:
 
 * `log_entry_creator`:  The user who made this change.
-* `operation`:  One of LogEntry.OPERATION_ADDED, _REMOVED, or _MODIFIED.
+* `operation`:  One of LogEntry.OPERATION_ADDED, LogEntry.OPERATION_REMOVED,
+or LogEntry.OPERATION_MODIFIED.
 * `model`:  The path to the model being logged (e.g. 'users.models.User').
 * `user`:  The user to which the model instance belongs.
 * `json_data`:  A full or partial JSON representation of data on the model instance.
