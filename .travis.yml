@@ -1,0 +1,13 @@
+language: python
+sudo: false
+python:
+    - 3.4
+cache:
+    directories:
+        - ~/.cache/pip
+script:
+    make test
+notifications:
+    email: false
+install:
+    pip install -r requirements.txt
