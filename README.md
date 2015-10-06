@@ -64,14 +64,17 @@ def log(self, operation, data):
     # value of extra_data() will be added to the
     # supplied data.
 
-def _log_on_create(self, serializer)
-    # Log a LogEntry.OPERATION_ADDED change.
+def _log_on_create(self, serializer):
+    # Log a LogEntry.OPERATION_ADDED change, using
+    # the log() method above.
 
-def _log_on_update(self, serializer)
-    # Log a LogEntry.OPERATION_MODIFIED change.
+def _log_on_update(self, serializer):
+    # Log a LogEntry.OPERATION_MODIFIED change, using
+    # the log() method above.
 
-def _log_on_destroy(self, instance)
-    # Log a LogEntry.OPERATION_DELETED change.
+def _log_on_destroy(self, instance):
+    # Log a LogEntry.OPERATION_DELETED change, using
+    # the log() method above.
 ```
 
 More abstract still:
