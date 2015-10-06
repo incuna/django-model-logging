@@ -21,6 +21,8 @@ class LogEntrySerializer(HyperlinkedModelSerializer):
 
     class Meta:
         model = models.LogEntry
-        fields = ('url', 'date_created', 'creator', 'operation', 'operation_label', 'data')
+        fields = (
+            'url', 'date_created', 'creator', 'operation', 'operation_label', 'data',
+        )
         read_only_fields = fields
         view_name = 'medication-history-detail'

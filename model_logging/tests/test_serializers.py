@@ -1,8 +1,8 @@
 from incuna_test_utils.testcases.api_request import BaseAPIRequestTestCase
 
+from model_logging.serializers import LogEntrySerializer
 from . import factories
 from .utils import get_log_entry_data
-from model_logging.serializers import LogEntrySerializer
 
 
 class TestLogEntrySerializer(BaseAPIRequestTestCase):

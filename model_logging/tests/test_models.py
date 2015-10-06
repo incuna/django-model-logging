@@ -2,8 +2,8 @@ import json
 
 from django.test import TestCase
 
-from . import factories
 from model_logging import models
+from . import factories
 
 
 class TestLogEntry(TestCase):

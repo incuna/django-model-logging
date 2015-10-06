@@ -1,8 +1,8 @@
 import simplejson
 from incuna_test_utils.testcases.api_request import BaseAPIRequestTestCase
 
-from .factories import UserFactory
 from model_logging import models, views
+from .factories import UserFactory
 
 FAKE_DATA = {'item': 42}
 
