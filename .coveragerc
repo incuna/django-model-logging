@@ -1,0 +1,5 @@
+[run]
+source = model_logging
+
+[report]
+show_missing = True
