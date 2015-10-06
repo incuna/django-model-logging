@@ -60,7 +60,9 @@ The class now has access to the following:
 ```python
 def log(self, operation, data):
     # A simplified version of LogEntry.objects.log,
-    # with some parameters pre-filled.
+    # with some parameters pre-filled. The return
+    # value of extra_data() will be added to the
+    # supplied data.
 
 def _log_on_create(self, serializer)
     # Log a LogEntry.OPERATION_ADDED change.
