@@ -13,7 +13,7 @@ def iso_8601(datetime):
 def get_log_entry_data(entry):
     return {
         'date_created': iso_8601(entry.date_created),
-        'creator': entry.creator.name,
+        'creator': entry.creator.email,
         'operation': entry.operation,
         'operation_label': entry.get_operation_display(),
         'data': json.loads(entry.data),

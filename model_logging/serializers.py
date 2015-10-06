@@ -3,7 +3,7 @@ import json
 from rest_framework.serializers import (
     CharField,
     Field,
-    HyperlinkedModelSerializer,
+    ModelSerializer,
 )
 
 from . import models
@@ -14,15 +14,14 @@ class JSONField(Field):
         return json.loads(obj)
 
 
-class LogEntrySerializer(HyperlinkedModelSerializer):
+class LogEntrySerializer(ModelSerializer):
     data = JSONField()
-    creator = CharField(source='creator.name')
+    creator = CharField(source='creator.email')
     operation_label = CharField(source='get_operation_display', read_only=True)
 
     class Meta:
         model = models.LogEntry
         fields = (
-            'url', 'date_created', 'creator', 'operation', 'operation_label', 'data',
+            'date_created', 'creator', 'operation', 'operation_label', 'data',
         )
         read_only_fields = fields
-        view_name = 'medication-history-detail'

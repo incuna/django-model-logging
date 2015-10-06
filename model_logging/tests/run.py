@@ -16,10 +16,12 @@ settings.configure(
     DEFAULT_FILE_STORAGE='inmemorystorage.InMemoryStorage',
     MIDDLEWARE_CLASSES=(),
     PASSWORD_HASHERS=('django.contrib.auth.hashers.MD5PasswordHasher',),
+    ROOT_URLCONF='',
     SITE_ID=1,
 
     INSTALLED_APPS=(
         'model_logging',
+        'pgcrypto',
 
         'django',
         'django.contrib.admin',
@@ -31,8 +33,8 @@ settings.configure(
 
     # Dummy pgcrypto configuration
     PGCRYPTO_KEY='so_secure_you_guys',
-    PUBLIC_PGP_KEY='as_is_this',
-    PRIVATE_PGP_KEY='ssssshhhh',
+    PUBLIC_PGP_KEY=open('model_logging/tests/keys/public.key').read(),
+    PRIVATE_PGP_KEY=open('model_logging/tests/keys/private.key').read(),
 )
 
 
