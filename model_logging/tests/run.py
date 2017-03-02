@@ -21,7 +21,6 @@ settings.configure(
 
     INSTALLED_APPS=(
         'model_logging',
-        'pgcrypto',
 
         'django',
         'django.contrib.admin',
@@ -30,11 +29,6 @@ settings.configure(
         'django.contrib.sessions',
         'django.contrib.sites',
     ),
-
-    # Dummy pgcrypto configuration
-    PGCRYPTO_KEY='so_secure_you_guys',
-    PUBLIC_PGP_KEY=open('model_logging/tests/keys/public.key').read(),
-    PRIVATE_PGP_KEY=open('model_logging/tests/keys/private.key').read(),
 )
 
 

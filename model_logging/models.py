@@ -2,7 +2,6 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-from pgcrypto.fields import TextPGPPublicKeyField
 
 
 def get_model_path(model):
@@ -66,7 +65,7 @@ class LogEntry(models.Model):
 
     operation = models.CharField(choices=OPERATION_CHOICES, max_length=255)
     model_path = models.CharField(max_length=255)
-    data = TextPGPPublicKeyField(default='')
+    data = models.TextField(default='')
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         null=True,
