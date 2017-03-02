@@ -6,6 +6,11 @@ model = 'LogEntry'
 
 
 def move_data(apps, schema_editor):
+    try:
+        from pgcrypto.fields import TextPGPPublicKeyField
+    except ImportError:
+        raise ImportError('Please install django-pgcrypto-fields to perform migration')
+
     LogEntry = apps.get_model(app, model)
     for entry in LogEntry.objects.all():
         entry.data_temp = entry.data
