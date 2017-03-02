@@ -2,7 +2,10 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import pgcrypto.fields
+try:
+    import pgcrypto.fields
+except ImportError:
+    pass
 from django.conf import settings
 import django.utils.timezone
 
