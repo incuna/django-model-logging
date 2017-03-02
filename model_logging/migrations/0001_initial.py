@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('date_created', models.DateTimeField(default=django.utils.timezone.now)),
                 ('operation', models.CharField(max_length=255, choices=[('added', 'Added'), ('removed', 'Removed'), ('modified', 'Modified')])),
                 ('model_path', models.CharField(max_length=255)),
-                ('data', models.TextField(default='')),
+                ('data', pgcrypto.fields.TextPGPPublicKeyField(default='')),
                 ('creator', models.ForeignKey(null=True, related_name='log_entries_created', to=settings.AUTH_USER_MODEL)),
                 ('user', models.ForeignKey(null=True, related_name='log_entries', to=settings.AUTH_USER_MODEL)),
             ],
