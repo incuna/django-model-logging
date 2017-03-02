@@ -34,5 +34,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(move_data reverse_code=move_data_back),
+        migrations.RunPython(move_data, reverse_code=move_data_back),
     ]
