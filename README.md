@@ -8,10 +8,6 @@ Logging for changes made to Django model instances.
 
 Add `model_logging` to your `INSTALLED_APPS`.
 
-This library uses [`django-pgcrypto-fields`](https://github.com/incuna/django-pgcrypto-fields),
-which means you will need PGP public and private keys.  See the `settings.configure()`
-block in `model_logging/tests/run.py` for an (extremely insecure) example.
-
 ## Usage
 
 #### Low-level use

@@ -5,7 +5,6 @@ version = '0.1.0'
 
 
 install_requires={
-    'django-pgcrypto-fields>=1.0.0,<2.0.0',
     'simplejson>=3.8.0,<4.0.0',
     'djangorestframework>=3.2.4,<4.0.0',
 }
