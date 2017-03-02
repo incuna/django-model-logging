@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import pgcrypto.fields
 import django.utils.timezone
 from django.conf import settings
 
