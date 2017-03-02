@@ -1,6 +1,6 @@
 # Changelog
 
-Upcoming
+# 1.0.0
 
 * BREAKING CHANGE: Remove django-pgcrypto-fields.
 
