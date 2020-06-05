@@ -2,7 +2,7 @@
 colour-runner==0.0.4
 coverage==4.0.0
 dj-database-url==0.3
-django==1.8.5
+django==1.11.29
 factory_boy==2.5.2
 flake8-import-order==0.5.1
 incuna-test-utils==6.3.1
